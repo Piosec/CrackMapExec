@@ -56,7 +56,7 @@ class connection(object):
             if self.args.kerberos:
                 self.host = self.hostname
         except Exception as e:
-            logging.debug('Error resolving hostname {}: {}'.format(self.hostname, e))
+            logging.error('Error resolving hostname {}: {}'.format(self.hostname, e))
             return
 
         self.proto_flow()
